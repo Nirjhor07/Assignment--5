@@ -88,7 +88,6 @@
 
     <!-- body content -->
     <section>
-      
       <!-- btns div all open & closed -->
       <div class="w-11/12 mx-auto bg-white mt-7">
         <div class="flex gap-2">
@@ -128,5 +127,66 @@
         </div>
       </div>
     </section>
+
+    <!-- All cards -->
+    <section id="all-card-container" class="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-4 gap-3 ">
+      <!-- Issue Card container -->
+      <div  class="card bg-base-100 shadow-md hover:shadow-lg transition-shadow border-t-4 border-violet-700">
+      <!-- cards -->
+        <div class="card-body">
+          <!-- Top section: Icon and Priority Badge -->
+          <div class="flex justify-between items-start mb-4">
+            <!-- Open Issue Icon -->
+            <div
+              class="w-7 h-7 rounded-full bg-success/30 flex items-center justify-center"
+            >
+             <img src="./assets/Closed- Status .png" alt="" srcset="">
+            </div>
+            <!-- Priority Badge -->
+            <span
+              class="badge badge-error badge-lg text-error bg-error/30 border-0 font-semibold"
+              >HIGH</span
+            >
+          </div>
+
+          <!-- Title -->
+          <h2 class="card-title text-xl font-bold mb-2">
+            Fix Navigation Menu On Mobile Devices
+          </h2>
+
+          <!-- Description -->
+          <p class="text-base-content/60 mb-4">
+            The navigation menu doesn't collapse properly on mobile devices…
+          </p>
+
+          <!-- Labels/Tags -->
+          <div class="flex gap-2 mb-4">
+            <span class="badge badge-lg bg-error/10 text-error border-0 gap-2">
+              <i class="fa-solid fa-bug"></i>
+              BUG
+            </span>
+            <span
+              class="badge badge-lg bg-warning/20 text-warning border-0 gap-2"
+            >
+              <i class="fa-solid fa-circle-question"></i>
+              HELP WANTED
+            </span>
+          </div>
+
+          <!-- Footer: Issue # and Date -->
+          <div
+            class="flex justify-between items-center text-sm text-base-content/60 border-t pt-4"
+          >
+            <span>#1 by <span class="font-medium">john_doe</span></span>
+            <span>1/15/2024</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- scripts -->
+     <script src="scripts/allApiCard.js"></script>
   </body>
+
 </html>
