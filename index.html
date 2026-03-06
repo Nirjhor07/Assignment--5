@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login Page</title>
+    <!-- Font awesome --icon CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- daisyUi + Tailwind -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- theme daisyUi -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- link fav icon -->
+    <link
+      rel="shortcut icon"
+      href="assets/github-logo.png"
+      type="image/x-icon"
+    />
+    <!-- google font geist -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- angta Stysheet -->
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body class="max-w-md min-h-screen bg-base-200 mx-auto items-center">
+    <header>
+      <div
+        class="logo w-full flex flex-col items-center justify-center pt-18 space-y-2"
+      >
+        <img src="./assets/github-logo.png" alt="Logo" />
+        <h1 class="text-3xl font-bold">GitHub Issues Tracker</h1>
+        <p class="text-neutral/70">Sign in to manage your issues</p>
+      </div>
+
+      <div
+        class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mx-auto mt-8"
+      >
+        <div class="card-body">
+          <fieldset class="fieldset">
+            <label class="label font-bold text-xl text-neutral">Username</label>
+            <input
+              id="input-num"
+              type="text"
+              maxlength="11"
+              minlength="11"
+              class="input input-bordered rounded-full bg-base-200"
+              placeholder="Enter Username"
+            />
+            <p class="text-[#4A00FF]">Default: admin</p>
+
+            <label class="label font-bold text-xl text-neutral">Password</label>
+            <input
+              id="login-pin-4-digit"
+              type="text"
+              maxlength="4"
+              minlength="4"
+              class="input input-bordered rounded-full bg-base-200"
+              placeholder="Enter Password"
+            />
+            <p class="text-[#4A00FF]">Default: admin123</p>
+
+            <button id="login-btn" class="btn btn-primary rounded-full mt-4">
+              Sign In
+            </button>
+          </fieldset>
+          <!-- or div -->
+          <div class="flex items-center my-4">
+            <div class="flex-1 h-px bg-base-300"></div>
+            <div><p class="px-3 text-base-content/60">OR</p></div>
+            <div class="flex-1 h-px bg-base-300"></div>
+          </div>
+
+          <!-- demo credential -->
+          <div class="text-center space-y-1.5">
+            <p>Demo Credentials:</p>
+            <div class="bg-base-300 flex flex-col items-center justify-center">
+              <p><span class="font-bold">Username:</span> admin</p>
+              <p><span class="font-bold">Password:</span> admin123</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
