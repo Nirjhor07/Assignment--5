@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login Page</title>
+    <!-- Font awesome --icon CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- daisyUi + Tailwind -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- theme daisyUi -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- link fav icon -->
+    <link
+      rel="shortcut icon"
+      href="assets/github-logo.png"
+      type="image/x-icon"
+    />
+    <!-- google font geist -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- angta Stysheet -->
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body class="bg-base-200">
+    <!-- hearder with name logo + issue btn and searchbar -->
+    <header>
+      <nav>
+        <div class="navbar bg-base-100 shadow-sm space-x-2 py-3.5">
+          <div class="dropdown dropdown-end">
+            <div
+              tabindex="0"
+              role="button"
+              class="btn btn-ghost btn-circle avatar"
+            >
+              <!-- image icon -->
+              <div class="w-10 rounded-full">
+                <img
+                  alt="Tailwind CSS Navbar component"
+                  src="./assets/github-logo.png"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- GitHub Issues Tracker -->
+          <div class="flex-1">
+            <a class="btn btn-ghost text-xl"
+              >GitHub <span class="hidden sm:inline">Issues Tracker</span></a
+            >
+          </div>
+          <!-- search tab -->
+          <div class="flex gap-2">
+            <input
+              id="issue-search-id"
+              type="text"
+              placeholder="Search"
+              class="input input-bordered w-24 md:w-auto"
+            />
+          </div>
+          <div>
+            <button class="btn btn-primary">
+              + <span class="hidden sm:inline">New Issue</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- body content -->
+    <section>
+      
+      <!-- btns div all open & closed -->
+      <div class="w-11/12 mx-auto bg-white mt-7">
+        <div class="flex gap-2">
+          <button id="btn-all" class="btn btn-outline">All</button>
+          <button id="btn-open" class="btn btn-outline">Open</button>
+          <button id="btn-closed" class="btn btn-outline">Closed</button>
+        </div>
+      </div>
+
+      <!-- total issue count div -->
+      <div
+        class="w-11/12 mt-2 mx-auto justify-between mb-4 px-4 items-center bg-white border-0 border-gray-400"
+      >
+        <!-- Header -->
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-2.5">
+            <div>
+              <img src="./assets/Aperture.png" alt="" />
+            </div>
+            <div>
+              <h1 class="text-2xl font-bold">
+                <span class="total-issue-count">50</span>
+                <span class="hidden sm:inline"> Issues</span>
+              </h1>
+              <p class="text-sm text-base-content/60">
+                <span class="hidden sm:inline"
+                  >Track and manage your project issues</span
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-2">
+            <span class="badge badge-success gap-1">● Open</span>
+            <span class="badge gap-1">● Closed</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
