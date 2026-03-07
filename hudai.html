@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Font awesome --icon CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- daisyUi + Tailwind -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- theme daisyUi -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- link fav icon -->
+    <link
+      rel="shortcut icon"
+      href="assets/github-logo.png"
+      type="image/x-icon"
+    />
+    <!-- google font geist -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- angta Stysheet -->
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+      <div id="modal-box-card" class="modal-box space-y-2.5">
+        <!-- Title -->
+        <h3 id="modal-title" class="text-2xl font-bold mb-3">
+          Fix broken image uploads
+        </h3>
+
+        <!-- Status and Author Info -->
+        <div class="flex items-center gap-2 mb-4 text-sm">
+          <span
+            id="modal-status-badge"
+            class="badge badge-success text-white font-semibold"
+          >
+            Opened
+          </span>
+          <span class="text-base-content/60">
+            Opened by
+            <span id="modal-author" class="font-medium">Fahim Ahmed</span> •
+            <span id="modal-date">22/02/2026</span>
+          </span>
+        </div>
+
+        <!-- Labels/Tags -->
+        <div class="flex gap-2 mb-4">
+          <span class="badge badge-lg bg-error/10 text-error border-0 gap-2">
+            <i class="fa-solid fa-bug"></i>
+            BUG
+          </span>
+
+          <span
+            class="badge badge-lg bg-warning/20 text-warning border-0 gap-2"
+          >
+            <i class="fa-solid fa-circle-question"></i>
+            HELP WANTED
+          </span>
+        </div>
+
+        <!-- Description -->
+        <p
+          id="modal-description"
+          class="text-base-content/70 mb-6 leading-relaxed"
+        >
+          The navigation menu doesn't collapse properly on mobile devices. Need
+          to fix the responsive behavior.
+        </p>
+
+        <!-- Assignee and Priority -->
+        <div class="flex justify-between items-center mb-6 bg-base-200 px-7 py-3">
+          <div>
+            <p class="text-sm text-base-content/60 mb-1">Assignee:</p>
+            <p id="modal-assignee" class="font-semibold">Fahim Ahmed</p>
+          </div>
+
+          <div class="text-right">
+            <p class="text-sm text-base-content/60 mb-1">Priority:</p>
+            <span
+              id="modal-priority"
+              class="badge badge-error badge-lg text-white font-semibold"
+            >
+              HIGH
+            </span>
+          </div>
+        </div>
+
+        <!-- Modal Action -->
+        <div class="modal-action">
+          <form method="dialog">
+            <button class="btn btn-primary">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+  </body>
+</html>

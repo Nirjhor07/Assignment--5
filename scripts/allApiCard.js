@@ -42,7 +42,7 @@ const displayAllCards = (data) => {
       <!-- Issue Card container -->
       <div  class="card bg-base-100 shadow-md hover:shadow-lg transition-shadow border-t-4 ${element.status === "open" ? "border-green-700" : "border-violet-700"}">
       <!-- cards -->
-        <div class="card-body">
+        <div onclick="modalLoad('${element.id}')" class="card-body">
           <!-- Top section: Icon and Priority Badge -->
           <div class="flex justify-between items-start mb-4">
             <!-- Open Issue Icon -->
