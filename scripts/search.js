@@ -9,6 +9,7 @@ searchItems.addEventListener("keyup", (event) => {
 });
 
 const searchText = (searchInput) => {
+ 
   //   console.log(searchInput);
   //dynamic url made
   const url = `https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${searchInput}`;
@@ -17,12 +18,14 @@ const searchText = (searchInput) => {
     .then((res) => res.json())
     .then((data) => {
       let value = data.data;
-      if (value.length<1) {
+      if (value.length < 1) {
+         spinner(true);
         alert("দুখিত!! কোনো ডাটা পাওয়া যায়নি।");
         parentCardContainerLength();
       } else {
         displayAllCards(value);
         parentCardContainerLength();
+        spinner(false)
       }
     });
 };

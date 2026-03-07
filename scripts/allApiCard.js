@@ -103,5 +103,6 @@ const displayAllCards = (data) => {
     //apend the child to parent container
     cardContainer.appendChild(cardChildContainer);
   });
+  spinner(false);
 };
 allCards("btn-all");
