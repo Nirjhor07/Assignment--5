@@ -1,9 +1,26 @@
 //fetching all cards info here function
-const allCards = () => {
+const allCards = (id) => {
   fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues")
     .then((res) => res.json())
-    .then((data) => displayAllCards(data.data)); //cause data array er vitore ase amr wantted object
+    .then((data) => {
+      activeButton(id);
+      if (id == "btn-all") {
+        displayAllCards(data.data);
+      } else if (id == "btn-open") {
+        // console.log("my name is open");
+        const openStatusCards = data.data.filter(
+          (element) => element.status === "open",
+        );
+        displayAllCards(openStatusCards);
+      } else if (id == "btn-closed") {
+        const closedStatusCards = data.data.filter(
+          (element) => element.status === "closed",
+        );
+        displayAllCards(closedStatusCards);
+      }
+    }); //cause data array er vitore ase amr wantted object
 };
+
 const displayAllCards = (data) => {
   //   console.log(data);
   // bap re doira niya ashi jekhane store korbo all cards
@@ -84,4 +101,4 @@ const displayAllCards = (data) => {
     cardContainer.appendChild(cardChildContainer);
   });
 };
-allCards();
+allCards("btn-all");
