@@ -6,17 +6,20 @@ const allCards = (id) => {
       activeButton(id);
       if (id == "btn-all") {
         displayAllCards(data.data);
+        parentCardContainerLength();
       } else if (id == "btn-open") {
         // console.log("my name is open");
         const openStatusCards = data.data.filter(
           (element) => element.status === "open",
         );
         displayAllCards(openStatusCards);
+        parentCardContainerLength();
       } else if (id == "btn-closed") {
         const closedStatusCards = data.data.filter(
           (element) => element.status === "closed",
         );
         displayAllCards(closedStatusCards);
+        parentCardContainerLength();
       }
     }); //cause data array er vitore ase amr wantted object
 };
