@@ -10,7 +10,7 @@ const displayAllCards = (data) => {
   const cardContainer = document.getElementById("all-card-container");
   //vitorer value shob faka kore dei
   cardContainer.innerHTML = "";
-  console.log(cardContainer);
+  // console.log(cardContainer);
 
   //forEach loop chalaiya shob gula object acces korbo
   data.forEach((element) => {
@@ -33,7 +33,7 @@ const displayAllCards = (data) => {
             </div>
             <!-- Priority Badge -->
             <span
-              class="badge badge-error badge-lg text-error ${element.priority==='high'? 'bg-error/30': element.priority==='low'? 'bg-gray-200':'bg-warning/30'} border-0 font-semibold"
+              class="badge badge-error badge-lg text-error ${element.priority === "high" ? "bg-error/30" : element.priority === "low" ? "bg-gray-200" : "bg-warning/30"} border-0 font-semibold"
               >${element.priority}</span
             >
           </div>
@@ -66,8 +66,15 @@ const displayAllCards = (data) => {
           <div
             class="flex justify-between items-center text-sm text-base-content/60 border-t pt-4"
           >
-            <span>#1 by <span class="font-medium">john_doe</span></span>
-            <span>1/15/2024</span>
+            <span>#${element.id} by <span class="font-medium">${element.author == "" ? "no author found" : element.author}</span></span>
+            <span>creatted: ${new Date(element.createdAt).toLocaleDateString()}</span>
+          </div>
+
+           <div
+            class="flex justify-between items-center text-sm text-base-content/60  pt-4"
+          >
+             <span class="font-medium">Assignee: ${element.assignee == "" ? "no assignee found" : element.assignee}</span>
+            <span>updated: ${new Date(element.updatedAt).toLocaleDateString()}</span>
           </div>
 
         </div>

@@ -89,11 +89,11 @@
     <!-- body content -->
     <section>
       <!-- btns div all open & closed -->
-      <div class="w-11/12 mx-auto bg-white mt-7">
-        <div class="flex gap-2">
-          <button id="btn-all" class="btn btn-outline">All</button>
-          <button id="btn-open" class="btn btn-outline">Open</button>
-          <button id="btn-closed" class="btn btn-outline">Closed</button>
+      <div  class="w-11/12 mx-auto bg-white mt-7">
+        <div id="all-btn-class" class="flex gap-2">
+          <button onclick="activeButton('btn-all')" id="btn-all" class="btn btn-outline">All</button>
+          <button onclick="activeButton('btn-open')"  id="btn-open" class="btn btn-outline">Open</button>
+          <button onclick="activeButton('btn-closed')" id="btn-closed" class="btn btn-outline">Closed</button>
         </div>
       </div>
 
@@ -121,18 +121,27 @@
           </div>
 
           <div class="flex gap-2">
-            <span class="badge badge-success gap-1">● Open</span>
-            <span class="badge gap-1">● Closed</span>
+            <span class="badge"
+              ><span class="text-green-700">●</span> Open</span
+            >
+            <span class="badge"
+              ><span class="text-violet-700">●</span> Closed</span
+            >
           </div>
         </div>
       </div>
     </section>
 
     <!-- All cards -->
-    <section id="all-card-container" class="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-4 gap-3 ">
+    <section
+      id="all-card-container"
+      class="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-4 gap-3"
+    >
       <!-- Issue Card container -->
-      <div  class="card bg-base-100 shadow-md hover:shadow-lg transition-shadow border-t-4 border-violet-700">
-      <!-- cards -->
+      <div
+        class="card bg-base-100 shadow-md hover:shadow-lg transition-shadow border-t-4 border-violet-700"
+      >
+        <!-- cards -->
         <div class="card-body">
           <!-- Top section: Icon and Priority Badge -->
           <div class="flex justify-between items-start mb-4">
@@ -140,7 +149,7 @@
             <div
               class="w-7 h-7 rounded-full bg-success/30 flex items-center justify-center"
             >
-             <img src="./assets/Closed- Status .png" alt="" srcset="">
+              <img src="./assets/Closed- Status .png" alt="" srcset="" />
             </div>
             <!-- Priority Badge -->
             <span
@@ -180,13 +189,12 @@
             <span>#1 by <span class="font-medium">john_doe</span></span>
             <span>1/15/2024</span>
           </div>
-
         </div>
       </div>
     </section>
 
     <!-- scripts -->
-     <script src="scripts/allApiCard.js"></script>
+    <script src="scripts/allApiCard.js"></script>
+    <script src="scripts/activeBtn.js"></script>
   </body>
-
 </html>
