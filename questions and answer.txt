@@ -27,7 +27,7 @@ The spread operator (...) in JavaScript is used to expand or unpack the elements
 3️⃣ What is the difference between map(), filter(), and forEach()?
 Ans: These are all function or method , used to perform specific task .
 ###map()
-it create a copy of an Array and you can manipulate copied array without changing the main Array.
+it create a copy of an Array and you can manupulate copied array without changing the main Array.
 Applies a function to each element
 Returns the transformed array
 
