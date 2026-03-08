@@ -18,7 +18,7 @@ const displayModal = (cardId) => {
   //create modal child
   const modalChild = document.createElement("div");
   modalChild.innerHTML = `
-      <div id="modal-box-card" class="modal-box space-y-2.5 border-t-4 ${cardId.status==='open'? 'border-green-600': 'border-violet-700'}">
+      <div id="modal-box-card" class="modal-box space-y-2.5 border-t-4 ${cardId.status === "open" ? "border-green-600" : "border-violet-700"}">
         <!-- Title -->
         <h3 id="modal-title" class="text-2xl font-bold mb-3">
           ${cardId.title}
@@ -41,17 +41,7 @@ const displayModal = (cardId) => {
 
         <!-- Labels/Tags -->
         <div class="flex gap-2 mb-4">
-          <span class="badge badge-lg bg-error/10 text-error border-0 gap-2">
-            <i class="fa-solid fa-bug"></i>
-            BUG
-          </span>
-
-          <span
-            class="badge badge-lg bg-warning/20 text-warning border-0 gap-2"
-          >
-            <i class="fa-solid fa-circle-question"></i>
-            HELP WANTED
-          </span>
+          ${createElement(cardId.labels)}
         </div>
 
         <!-- Description -->

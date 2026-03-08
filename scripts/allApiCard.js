@@ -70,16 +70,9 @@ const displayAllCards = (data) => {
 
           <!-- Labels/Tags -->
           <div class="flex gap-2 mb-4">
-            <span class="badge badge-lg bg-error/10 text-error border-0 gap-2">
-              <i class="fa-solid fa-bug"></i>
-              BUG
-            </span>
-            <span
-              class="badge badge-lg bg-warning/20 text-warning border-0 gap-2"
-            >
-              <i class="fa-solid fa-circle-question"></i>
-              HELP WANTED
-            </span>
+           <div class="gap-4 flex">
+          ${createElement(element.labels)}
+          </div>
           </div>
 
           <!-- Footer: Issue # and Date -->
